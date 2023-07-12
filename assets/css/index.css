@@ -13,10 +13,16 @@
     src: url('../../assets/fonts/NotoSansKR-Light.otf');
 }
 
+@font-face {
+    font-family: 'PyeongChangPeace';
+    src: url('../../assets/fonts/PyeongChangPeace-Light.ttf');
+}
+
+
 :root {
     --title-color: #232733;
     --common-color: #575b68;
-    --violet-color: #0379FB;
+    
     --light-violet-color: #f8f6ff;
 
     --title-font-size: 50px;
@@ -74,7 +80,7 @@ body {
     font-size: 12px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'NotoSansRegular', "맑은 고딕", "Malgun Gothic",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+    "Segoe UI Symbol", "Noto Color Emoji", "PyeongChangPeace";
     font-weight: 400;
     background-color: #ffffff;
     overflow-x: hidden;
@@ -158,6 +164,7 @@ body {
 }
 
 #section .article .article-title {
+    font-family: PyeongChangPeace, sans-serif;
     font-size: var(--title-font-size);
     color: var(--title-color);
     font-weight: bold;
@@ -174,12 +181,29 @@ body {
     white-space: nowrap;
 }
 
-#section .article .article-image {
-    max-width: 750px;
+#section .article .slider .article-image {
+    max-width: 981px;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    max-height: 680px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
-#section .article .article-image img {
-    width: 100%;
+#section .article .slider .article-image.article-image-01 {
+    background-image: url('../../assets/image_v4/0001.png');
+}
+#section .article .slider .article-image.article-image-02 {
+    background-image: url('../../assets/image_v4/0002.png');
+}
+#section .article .slider .article-image.article-image-03 {
+    background-image: url('../../assets/image_v4/0003.png');
+}
+
+#section .article .slider .article-image img {
+    width: auto;
+    height: calc(100vh - 70px);
 }
 
 #section .article .article-event-badge {
@@ -189,6 +213,15 @@ body {
 }
 
 #section .article .article-event-badge img {
+    width: 100%;
+}
+
+
+#section .article .article-image {
+    max-width: 750px;
+}
+
+#section .article .article-image img {
     width: 100%;
 }
 
@@ -210,10 +243,13 @@ body {
 #section .slider {
     height: 100%;
     overflow: hidden;
+    background-image: url('../../assets/image_v4/bg_01.png');
+    background-size:cover;
 }
 
 #section .slider .slick-list {
-    height: calc(100% - 70px);
+    height: calc(100vh - 70px);
+    max-height: 680px;
 }
 
 #section .slider .slick-list .slick-track,
@@ -222,7 +258,7 @@ body {
 #section .slider .slick-list .slick-track .slick-slide > div > .slider-container {
     min-height: var(--slider-height);
     height: 100%;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
 }
 
 #section .slider .slider-container {
@@ -399,13 +435,27 @@ body {
         margin-top: 20px;
         font-size: var(--common-mobile-font-size);
     }
+    
+    #section .slider .slider-container {
+        padding-bottom:30px;
+        align-items: start;
+    }
+
+    #section .article .slider .article-image {
+        width: 100vw;
+        height: calc(50vh - 70px);
+        background-size:contain;
+        background-position: center top;
+    }
+
+    #section .article .slider .article-image {
+    }
 
     #section .article .article-image {
         max-width: 540px;
         margin-bottom: 10px;
     }
 
-    /* 이성 프로필 6시간 이미지 대응 */
     #section .article:nth-child(3) .article-image {
         max-width: 572px;
     }
@@ -443,7 +493,6 @@ body {
 
     #section .slider .slider-container {
         justify-content: center;
-        align-items: center;
     }
 
     #section .slider .slider-container .article-content {
@@ -456,6 +505,11 @@ body {
 
     #section .slider .slider-container.event .item:first-child {
 
+    }
+    
+    #section .article .article-image {
+        max-width: 100%;
+        width: 450px;
     }
 
     #section .slider .slick-dots li {

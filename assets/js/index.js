@@ -1,9 +1,9 @@
 $(".slider").slick({
     infinite: true,
     slidesToShow: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     speed: 650,
     arrows: false,
     dots: true,
