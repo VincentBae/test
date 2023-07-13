@@ -20,8 +20,8 @@
 
 
 :root {
-    --title-color: #232733;
-    --common-color: #575b68;
+    --title-color: #8b78d1;
+    --common-color: #df7aa2;
     
     --light-violet-color: #f8f6ff;
 
@@ -157,7 +157,7 @@ body {
 
 #section .article.bottom {
     padding: 150px 0;
-    background: url('../../assets/image/img-back@3x.jpg') no-repeat;
+    background: url('../../assets/image_v5/bottom_image.png') no-repeat;
     background-size: cover;
     background-position: right bottom;
     justify-content: flex-start;
