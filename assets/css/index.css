@@ -1,543 +1,453 @@
-@font-face {
-    font-family: 'NotoSansRegular';
-    src: url('../../assets/fonts/NotoSansKR-Regular.otf');
-}
+@charset "UTF-8";
 
-@font-face {
-    font-family: 'NotoSansBold';
-    src: url('../../assets/fonts/NotoSansKR-Bold.otf');
-}
-
-@font-face {
-    font-family: 'NotoSansLight';
-    src: url('../../assets/fonts/NotoSansKR-Light.otf');
-}
-
-@font-face {
-    font-family: 'PyeongChangPeace';
-    src: url('../../assets/fonts/PyeongChangPeace-Light.ttf');
-}
-
-
-:root {
-    --title-color: #8b78d1;
-    --common-color: #df7aa2;
-    
-    --light-violet-color: #f8f6ff;
-
-    --title-font-size: 50px;
-    --title-mobile-font-size: 30px;
-    --common-font-size: 23px;
-    --common-mobile-font-size: 14px;
-    --max-width: 1446px;
-    --header-height: 60px;
-    --slider-height: 680px;
-    --slider-mobile-height: 580px;
-}
-
-html, body {
+body {
     width: 100%;
-    height: 100%;
-    --webkit-touch-callout: none;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-html, body, form, fieldset, img {
-    margin: 0;
-    padding: 0;
-    border: 0;
+#wrap {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 60px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-p, h1, h2, h3 {
-    margin: 0.1em;
-    padding: 0;
-    border: 0;
-}
-
-ul, dl, dt, dd {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a {
-    display: inline-block;
-    color: #000;
-    text-decoration: none;
-}
-
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    /* padding: 0 30px; */
     box-sizing: border-box;
 }
 
-img {
-    pointer-events: none;
-}
-
-body {
-    position: relative;
-    font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'NotoSansRegular', "맑은 고딕", "Malgun Gothic",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji", "PyeongChangPeace";
-    font-weight: 400;
-    background-color: #ffffff;
-    overflow-x: hidden;
-}
-
-.container {
-    position: relative;
-    max-width: var(--max-width);
-    width: 100%;
-    height: 100%;
+.headerWrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    padding: 0 30px;
 }
 
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: var(--header-height);
-    background-color: #ffffff;
-    z-index: 99;
+.shadow {
+    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0.5px 1px 1px) drop-shadow(rgba(0, 0, 0, 0.15) 4px 8px 8px);
 }
 
-#header #logo {
+header #bi img {
+    height: 50px;
+}
+
+header #sns {
     display: inline-flex;
-    width: 150px;
-}
-
-#header #logo img {
-    width: 100%;
-}
-
-#header #sns {
-    display: inline-flex;
-    width: 90px;
-    justify-content: space-between;
     align-items: center;
 }
 
-#header #sns .sns-icon.instagram {
-    width: 28px;
+header #sns li {
+    margin-left: 20px;
 }
 
-#header #sns .sns-icon.youtube {
-    width: 35px;
+header #sns li .instagram {
+    display: block;
+    width: 30px;
 }
 
-#header #sns .sns-icon img {
+header #sns li .youtube {
+    display: block;
+    width: 43px;
+}
+
+header #sns li .facebook {
+    display: block;
+    width: 30px;
+}
+
+header #sns li .tiktok {
+    display: block;
+    width: 30px;
+}
+
+header #sns li .x {
+    display: block;
+    width: 30px;
+}
+header #sns img {
     width: 100%;
 }
 
-#section {
-    margin-top: var(--header-height);
+/* mainVisual 스타일 */
+.mainVisual {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    background: #df7aa2;
 }
 
-#section .article {
-    padding: 10px 0;
-}
-
-#section .article.top {
-    background-color: var(--violet-color);
-    min-height: var(--slider-height);
+.mainVisual .swiper {
+    width: 100%;
     height: 100%;
 }
 
-#section .article.right {
-    background-color: var(--light-violet-color);
-}
-
-#section .article.bottom {
-    padding: 150px 0;
-    background: url('../../assets/image_v5/bottom_image.png') no-repeat;
+.mainVisual .swiper .swiper-slide {
+    background-color: #fff;
     background-size: cover;
-    background-position: right bottom;
-    justify-content: flex-start;
-}
-
-#section .article .article-title {
-    font-family: PyeongChangPeace, sans-serif;
-    font-size: var(--title-font-size);
-    color: var(--title-color);
-    font-weight: bold;
-    line-height: 1.22;
-    letter-spacing: 1.1px;
-    white-space: nowrap;
-}
-
-#section .article .article-content {
-    margin-top: 30px;
-    font-size: var(--common-font-size);
-    color: var(--common-color);
-    line-height: 1.54;
-    white-space: nowrap;
-}
-
-#section .article .slider .article-image {
-    max-width: 981px;
-    width: 100vw;
-    height: calc(100vh - 70px);
-    max-height: 680px;
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: center;
 }
 
-#section .article .slider .article-image.article-image-01 {
-    background-image: url('../../assets/image_v4/0001.png');
-}
-#section .article .slider .article-image.article-image-02 {
-    background-image: url('../../assets/image_v4/0002.png');
-}
-#section .article .slider .article-image.article-image-03 {
-    background-image: url('../../assets/image_v4/0003.png');
+.mainVisual .swiper .swiper-slide.slide-1 {
+    background-image: url('../images/slider_image_01.png');
 }
 
-#section .article .slider .article-image img {
-    width: auto;
-    height: calc(100vh - 70px);
+.mainVisual .swiper .swiper-slide.slide-2 {
+    background-image: url('../images/slider_image_02.png');
 }
 
-#section .article .article-event-badge {
-    display: inline-block;
-    width: 75px;
-    margin-bottom: 15px;
+.mainVisual .swiper .swiper-slide.slide-3 {
+    background-image: url('../images/slider_image_03.png');
 }
 
-#section .article .article-event-badge img {
-    width: 100%;
+.mainVisual .swiper .swiper-slide .content {
+    margin-left: 20vh;
+    margin-top: 30vh;
 }
 
-
-#section .article .article-image {
-    max-width: 750px;
+.mainVisual .swiper .swiper-slide .content .downloadLinkBox {
+    margin-top: 30px;
+    font-size: 0;
+    display: flex;
 }
 
-#section .article .article-image img {
-    width: 100%;
-}
-
-#section .article .semi-title {
-    font-size: 34px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-#section .article.bottom .article-title,
-#section .article.bottom .article-content {
-    color: #ffffff;
-}
-
-#section .article.bottom .background-image {
-    display: none;
-}
-
-#section .slider {
-    height: 100%;
-    overflow: hidden;
-    background-image: url('../../assets/image_v4/bg_01.png');
-    background-size:cover;
-}
-
-#section .slider .slick-list {
-    height: calc(100vh - 70px);
-    max-height: 680px;
-}
-
-#section .slider .slick-list .slick-track,
-#section .slider .slick-list .slick-track .slick-slide,
-#section .slider .slick-list .slick-track .slick-slide > div,
-#section .slider .slick-list .slick-track .slick-slide > div > .slider-container {
-    min-height: var(--slider-height);
-    height: 100%;
-    /* padding-bottom: 50px; */
-}
-
-#section .slider .slider-container {
-    display: flex!important;
-    max-width: var(--max-width);
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#section .slider .slider-container .article-content {
-    font-size: var(--common-font-size);
-}
-
-#section .slider .slider-container .article-title,
-#section .slider .slider-container .article-content {
-    color: #ffffff;
-}
-
-#section .download-button-group {
-    margin-top: 100px;
-}
-
-#section .download-button-group .download-button {
-    display: inline-block;
-    width: 160px;
+.mainVisual .swiper .swiper-slide .content .downloadLinkBox a.downloadLink {
+    display: block;
+    text-decoration: none;
+    width: 200px;
     margin-right: 10px;
 }
 
-#section .download-button-group .download-button img {
+.mainVisual .swiper .swiper-slide .content .downloadLinkBox a.downloadLink img {
     width: 100%;
 }
 
-#section .slider .slick-dots {
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    bottom: 30px;
-    transform: translate(-50%, 0);
+.mainVisual .swiper .swiper-slide .content .caption {
+    font-family: 'PyeongChangPeace-light';
+    letter-spacing: 0.3rem;
+    font-size: 60px;
+    color: #fff;
+    line-height: 120%;
 }
-
-#section .slider .slick-dots li {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 8px;
-}
-
-#section .slider .slick-dots li button {
-    display: block;
-    width: 10px;
-    height: 10px;
+/* slider 스타일 */
+section.downloadLinkBox {
+    display: none;
+    padding: 30px 0;
     font-size: 0;
-    line-height: 0;
-    cursor: pointer;
-    background: #ffffff;
-    opacity: 0.6;
-    border-width: 5px 0;
-    border-color: transparent;
-    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
-#section .slider .slick-dots li.slick-active button {
-    border-color: transparent;
-    opacity: 1;
-}
-
-#section .slick-dots li button:before {
-    font-size: 20px;
-    color: white;
-}
-
-#footer {
-    padding: 50px 0;
-}
-
-#footer .container {
+section.downloadLinkBox a.downloadLink {
     display: block;
+    text-decoration: none;
+    width: 200px;
+    max-width: 40vw;
+    margin-right: 10px;
 }
 
-#footer ul {
+section.downloadLinkBox a.downloadLink:last-child {
+    margin-right: 0;
+}
+
+section.downloadLinkBox a.downloadLink img {
+    width: 100%;
+}
+
+section.default .title {
+    line-height: 1.1;
+    font-family: 'PyeongChangPeace-light';
+    font-size: 50px;
+    color: #8b78d1;
 
 }
 
-#footer ul li {
+section.default .desc {
+    line-height: 1.3;
+    font-family: 'Noto Sans KR';
+    font-size: 20px;
+    color: #df7aa2;
+
+}
+
+.inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    max-width: 1440px;
+    justify-content: space-between;
+}
+
+.contentText {
+    /* flex: 1; */
+}
+
+.contentImg {
+    margin-left: 0px;
+    /* 이미지와 텍스트 사이의 간격을 조절할 수 있습니다. */
+}
+
+section.download {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 680px;
+    justify-content: center;
+}
+
+section.download .downloadWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+    background: url(../images/bottom_image.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section.download .downloadBox {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.download .download_text {
+    line-height: 1.1;
+    font-family: 'PyeongChangPeace-light';
+    font-size: 50px;
+    color: #ffffff;
+}
+
+section.download .download-button-group {
+    margin-top: 100px;
+}
+
+section.download .download-button-group .download-button {
+    display: inline-block;
+    width: 160px;
+    max-width: 40vw;
+    margin-right: 10px;
+}
+
+section.download .download-button-group .download-button img {
+    width: 100%;
+}
+
+section.download .title {
+    line-height: 1.1;
+    font-family: 'PyeongChangPeace-light';
+    font-size: 50px;
+    color: #8b78d1;
+}
+
+section.download .desc {
+    line-height: 1.3;
+    font-family: 'Noto Sans KR';
+    font-size: 20px;
+    color: #df7aa2;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    padding: 50px 0;
+    display: block;
+    font-size: 12px;
+}
+.footer ul li {
     display: inline-block;
     color: #aaaaaa;
-    letter-spacing: -0.2px;
+
 }
 
-#footer ul li:after {
+.footer ul li:after {
     content: "|";
     color: #aaaaaa;
     margin-left: 10px;
     margin-right: 5px;
 }
 
-#footer ul li:last-child:after {
-    content: "";
-    margin: 0;
+.footer .list {
+    margin-top: 50px;
+    margin-left: 15px;
 }
 
-#footer .list li,
-#footer .highlight {
-    color: #222222;
+.footer .information {
+    margin-top: 10px;
+    margin-left: 15px;
 }
 
-#footer .information {
-    margin-top: 5px;
+.footer .copyright {
+    margin-top: 30px;
+    margin-left: 15px;
 }
 
-#footer .document {
-    margin-top: 15px;
-}
 
-#footer .copyright {
-    margin-top: 40px;
-}
 
-.flex-wrap {
-    flex-wrap: wrap;
-}
 
-.flex-reverse-wrap {
-    flex-wrap: wrap-reverse;
-}
+/* 창 크기가 작아질 때의 스타일 */
+@media (max-width: 1300px) {
+    section.default img{
+        max-width: 100%;
+    }
 
-@media screen and (max-width: 1235px) {
-    body {
+    section.default .title{
+        font-size: 6vw;
+    }
+
+    section.default .desc{
+        font-size: 3.7vw;
+    }
+    
+    section.default.default-1 .inner {
+        width: 96%;
+        margin-left: 2%;
+        flex-direction: column;
+        /* 세로로 나열하도록 변경 */
+        align-items: center;
+        /* 가운데 정렬 */
         text-align: center;
     }
 
-    #section .container {
-        justify-content: center;
-    }
-
-    #section .download-button-group {
-        margin-top: 50px;
-        margin-bottom: 10px;
-    }
-
-    #section .slider-container.event .download-button-group {
-        margin-top: 25px;
-    }
-
-    #section .download-button-group .download-button {
-        margin-bottom: 10px;
-    }
-
-    #section .article:not(:last-child) {
-        padding-bottom: 80px;
-    }
-
-    #section .article.top {
-        min-height: var(--slider-mobile-height);
-        padding-top: 0px;
-        padding-bottom: initial;
-        bottom: -5px;
-    }
-
-    #section .article .article-title {
-        font-weight: bold;
-        font-size: var(--title-mobile-font-size);
-    }
-
-    #section .article .semi-title {
-        font-weight: bold;
-        font-size: 26px;
-    }
-
-    #section .article .article-content {
+    section.default.default-1 .contentImg {
         margin-top: 20px;
-        font-size: var(--common-mobile-font-size);
-    }
-    
-    #section .slider .slider-container {
-        padding-bottom:30px;
-        align-items: start;
+        /* 이미지와 텍스트 사이의 간격 조정 */
+        order: -1;
+        /* 이미지를 텍스트보다 위로 이동 */
+        margin-bottom: 20px;
     }
 
-    #section .article .slider .article-image {
-        width: 100vw;
-        height: calc(50vh - 70px);
-        background-size:contain;
-        background-position: center top;
+    section.default.default-2{
+        margin-top: 10vw;
     }
 
-    #section .article .slider .article-image {
+    section.default.default-2 .inner {
+        width: 96%;
+        margin-left: 2%;
+        flex-direction: column;
+        /* 세로로 나열하도록 변경 */
+        align-items: center;
+        /* 가운데 정렬 */
+        text-align: center;
     }
 
-    #section .article .article-image {
-        max-width: 540px;
-        margin-bottom: 10px;
+    section.default.default-2 .contentImg {
+        margin-top: 20px;
+        /* 이미지와 텍스트 사이의 간격 조정 */
+        order: -1;
+        /* 이미지를 텍스트보다 위로 이동 */
+        margin-bottom: 20px;
     }
 
-    #section .article:nth-child(3) .article-image {
-        max-width: 572px;
+    section.default.default-3{
+        margin-top: 10vw;
     }
 
-    #section .article .article-event-badge {
-        width: 55px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+    section.default.default-3 .inner {
+        width: 96%;
+        margin-left: 2%;
+        flex-direction: column;
+        /* 세로로 나열하도록 변경 */
+        align-items: center;
+        /* 가운데 정렬 */
+        text-align: center;
     }
 
-    #section .article.bottom {
-        padding-top: 0;
-        padding-bottom: 90px;
-        background: var(--violet-color);
+    section.default.default-3 .contentImg {
+        margin-top: 20px;
+        /* 이미지와 텍스트 사이의 간격 조정 */
+        order: -1;
+        /* 이미지를 텍스트보다 위로 이동 */
+        margin-bottom: 20px;
     }
 
-    #section .article.bottom .background-image {
-        display: block;
-        margin-bottom: 70px;
+}
+@media (max-width: 768px) {
+    .mainVisual {
+        height: calc(60vh - 60px);
     }
 
-    #section .article.bottom .background-image img {
+    .mainVisual .swiper .swiper-slide.slide-1 {
+        background-position: 70% center;
+    }
+
+    .mainVisual .swiper .swiper-slide.slide-2 {
+        background-position: center;
+    }
+
+    .mainVisual .swiper .swiper-slide.slide-3 {
+        background-position: 70% center;
+    }
+
+    .mainVisual .swiper .swiper-slide .content {
+        position: relative;
         width: 100%;
-        max-height: 600px;
-        object-fit: cover;
-        object-position: bottom;
-    }
-
-    #section .slider .slick-list .slick-track,
-    #section .slider .slick-list .slick-track .slick-slide,
-    #section .slider .slick-list .slick-track .slick-slide > div,
-    #section .slider .slick-list .slick-track .slick-slide > div > .slider-container {
-        min-height: var(--slider-mobile-height);
-    }
-
-    #section .slider .slider-container {
+        height: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
         justify-content: center;
+        align-items: center;
     }
 
-    #section .slider .slider-container .article-content {
-        font-size: var(--common-mobile-font-size);
+    .mainVisual .swiper .swiper-slide .content .downloadLinkBox {
+        display: none;
     }
 
-    #section .slider .slider-container .item:first-child {
-
+    .mainVisual .swiper .swiper-slide .content .caption {
+        font-size: 10vw;
+        color: rgba(255, 255, 255, 0.7);
     }
 
-    #section .slider .slider-container.event .item:first-child {
-
-    }
-    
-    #section .article .article-image {
-        max-width: 100%;
-        width: 450px;
+    section.downloadLinkBox {
+        display: flex;
     }
 
-    #section .slider .slick-dots li {
-        margin: 5px;
+    section.download{
+        margin-top: 10vw;
     }
 
-    #footer {
-        padding-top: 30px;
+    section.download .downloadBox{
+        background-color: rgba(0,0,0,0.5);
     }
 
-    #footer .container {
-        text-align: left;
-        font-size: 10px;
-    }
-}
-
-@media screen and (max-width: 943px) {
-    #section .slider .slider-container .item:first-child {
-        align-self: flex-end;
+    section.download .download_title{
+        font-family: 'Noto Sans KR';
+        font-weight: bold;
+        text-align: center;
+        font-size: 6.5vw;
+        line-height: 1.5;
+        letter-spacing: 0.75vw;
     }
 
-    #section .slider .slider-container.event .item:first-child {
-
+    section.download .download-button-group{
+        text-align: center;
     }
-}
 
-@media screen and (max-width: 541px) {
-    #footer ul.information li:after {
-        content: "";
-    }
 }

@@ -1,280 +1,211 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon-32x32.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <title>
-        별과 사람이 쏟아지는, 오늘도 별별사람
-    </title>
-    <style>
-        #section .article.right {
-            background-color: #ffffff
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <title>별과 사람이 쏟아지는, 오늘도 별별사람</title>
 </head>
 
 <body>
-    <div id="header">
-        <div class="container">
-            <div id="logo">
-                <img src="assets/image/logo-color@3x.png" alt="별별사람">
-            </div>
-
-            <div id="sns">
-                <div class="sns-icon instagram">
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <img src="assets/image/in@3x.png" alt="Instagram">
-                    </a>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <div id="bi">
+                    <img src="./assets/images/logo-color@3x.png" alt="별별사람로고">
                 </div>
 
-                <div class="sns-icon youtube">
-                    <a href="https://www.youtube.com/">
-                        <img src="assets/image/you@3x.png" alt="Youtube">
-                    </a>
+                <ul id="sns">
+                    <li>
+                        <a class="instagram"
+                            href="https://instagram.com/star2pp?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D">
+                            <img src="./assets/images/in@3x.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="facebook"
+                            href="https://www.facebook.com/profile.php?id=100095016706031&mibextid=ZbWKwL">
+                            <img src="./assets/images/sns_logo_face.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tiktok" href="https://www.tiktok.com/@star2pp?is_from_webapp=1&sender_device=pc">
+                            <img src="./assets/images/sns_logo_tik.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="x" href="https://twitter.com/star2pp?t=eXH7tLbdqY7hp_bIQrxOUg&s=32">
+                            <img src="./assets/images/sns_logo_x.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="youtube" href="https://www.youtube.com/@star2pp">
+                            <img src="./assets/images/you@3x.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="mainVisual"><!-- Slider main container -->
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide slide-1" data-swiper-autoplay="4000">
+                        <div class="content">
+                            <p class="caption">너에게 보내는<br />내 빛나는 진심</p>
+                            <div class="downloadLinkBox">
+                                <a class="downloadLink downloadIos" href="#none" target="_blank"><img src="./assets/images/store_apple_01.png" alt="애플 앱스토어" /></a>
+                                <a class="downloadLink downloadAndroid" href="#none" target="_blank"><img src="./assets/images/store_google_01.png" alt="구글플레이" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-2" data-swiper-autoplay="4000">
+                        <div class="content">
+                            <p class="caption">매일매일 무료로<br />새로운 친구를<br />추천받아 보세요</p>
+                            <div class="downloadLinkBox">
+                                <a class="downloadLink downloadIos" href="#none" target="_blank"><img src="./assets/images/store_apple_01.png" alt="애플 앱스토어" /></a>
+                                <a class="downloadLink downloadAndroid" href="#none" target="_blank"><img src="./assets/images/store_google_01.png" alt="구글플레이" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-3" data-swiper-autoplay="4000">
+                        <div class="content">
+                            <p class="caption">이제 마음을<br />'별'로 표현하세요</p>
+                            <div class="downloadLinkBox">
+                                <a class="downloadLink downloadIos" href="#none" target="_blank"><img src="./assets/images/store_apple_01.png" alt="애플 앱스토어" /></a>
+                                <a class="downloadLink downloadAndroid" href="#none" target="_blank"><img src="./assets/images/store_google_01.png" alt="구글플레이" /></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- 자리만 -->
+            <!-- <div class="slider">
+                <div class="slide">
+                </div>
+                <div class="slide">
+                    <img src="./assets/images/slider_image_02.png" alt="Slider Image 2">
+                </div>
+                <div class="slide">
+                    <img src="./assets/images/slider_image_03.png" alt="Slider Image 3">
+                </div>
+            </div> -->
+        </section>
+        <section class="downloadLinkBox">
+            <a class="downloadLink shadow downloadIos" href="#none" target="_blank"><img src="./assets/images/store_apple_01.png" alt="애플 앱스토어" /></a>
+            <a class="downloadLink shadow downloadAndroid" href="#none" target="_blank"><img src="./assets/images/store_google_01.png" alt="구글플레이" /></a>
+        </section>
+        <section class="default default-1">
+            <div class="inner">
+                <div class="contentText">
+                    <p class="title">사랑과 우정</p>
+                    <p class="title">모두 "별"로 쉽게 표현해보세요.</p>
+                    <br>
+                    <p class="desc">고마운 사람, 몰래 짝사랑하는 사람,</p>
+                    <p class="desc">말로 표현하기엔 몸은 배배, 손도 오글오글</p>
+                    <p class="desc">별점 다섯개 만점으로 마음을 몰래 전달해보면 어떨까요?</p>
+                </div>
+                <div class="contentImg">
+                    <img src="./assets/images/01_img.png">
+                </div>
+            </div>
+        </section>
+        <section class="default default-2">
+            <div class="inner">
+                <!-- <div class="contentImg"></div> -->
+                <img src="./assets/images/02_img.png">
+                <div class="contentText">
+                    <p class="title">날 좋아하는 당신,</p>
+                    <p class="title">그런데 누구시죠?</p>
+                    <br>
+                    <p class="desc">서로 5점 만점을 주면 자동으로 "오별채팅"이 열려요!</p>
+                    <p class="desc">날 100% 좋아하는 익명의 사람과 5분간 두근두근 대화 어때요?</p>
+                </div>
+            </div>
+        </section>
+        <section class="default default-3">
+            <div class="inner">
+                <div class="contentText">
+                    <p class="title">매너는 좋은데</p>
+                    <p class="title">정말로 좋은 사람일까?</p>
+                    <br>
+                    <p class="desc">걱정하지 마세요! 별별사람은 지인이 서로를 평가해주기 때문에</p>
+                    <p class="desc">훨씬 신뢰도 높은 만남을 가질 수 있어요</p>
+                    <p class="desc">주변 사람의 평판이 사람의 가치를 나타내는 법!</p>
+                </div>
+                <div class="contentImg">
+                    <img src="./assets/images/01_img.png">
+                </div>
+            </div>
+        </section>
+        <section class="download">
+            <div class="downloadWrap">
+                <!-- <div class="download_image">
+                    <img src="./assets/images/bottom_image.png" alt="background">
+                </div> -->
+                <div class="downloadBox">
+                    <div class="download_text">
+                        <p class="download_title">지금 별별사람에서</p>
+                        <p class="download_title">운명의 그 사람을 만나보세요</p>
+
+                    </div>
+                    <div class="download-button-group">
+                        <a href="https://itunes.apple.com/kr/app/amanda/id906675357?l=en&mt=8" target="_blank"
+                            class="download-button">
+                            <img src="./assets/images/store_apple_01.png" alt="Download App Store">
+                        </a>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.dorsia.amanda" target="_blank"
+                            class="download-button">
+                            <img src="./assets/images/store_google_01.png" alt="Download Play Store">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="inner">
+                <div class="footer">
+                    <ul class="list">
+                        <li><a href="http://gsdlab.co.kr/" target="_blank">회사소개</a></li>
+                        <li><a href="./assets/privacy/agreement.html" target="_blank">이용약관</a></li>
+                        <li><a href="./assets/privacy/privacy.html" target="_blank">개인정보 취급 방침</a></li>
+                        <li><a href="./assets/privacy/teenager.html" target="_blank">청소년 보호정책</a></li>
+                        <li><a href="./assets/privacy/marketing.html" target="_blank">마케팅 정보 수신동의</a></li>
+                        <!-- <li><a href="./assets/privacy/location_Data.html" target="_blank">위치정보 이용약관</a></li> -->
+                    </ul>
+
+                    <ul class="information">
+                        <li>(주)지에스디랩 (대표이사: 유연미 / 개인정보보호책임자: 김동현)</li>
+                        <li>서울시 금천구 가산디지털2로 101, 한라원앤원 A동 12층</li>
+                        <li>02-597-9600<span class="highlight"><a class="mail" href="mailto:help@amanda.co.kr">(이메일
+                                    고객센터만
+                                    운영)</a></span></li>
+                        <li>사업자등록번호: 140-81-84821</li>
+                        <li>통신판매신고번호: 제 2016-서울금천-0736호</li>
+                    </ul>
+
+                    <ul class="information">
+                        <li>고객센터: <a class="mail" href="mailto:help@gsdlab.co.kr">help@gsdlab.co.kr</a></li>
+                        <li>카카오톡: 친구찾기>id검색>"@별별사람" 검색</li>
+                    </ul>
+                    <div class="copyright">
+                        <span class="highlight">Copyright@지에스디랩 co.,Ltd. All Rights reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <div id="section">
-        <div class="article top">
-            <div class="slider">
-              
-
-                <div class="slider-container flex-reverse-wrap">
-                    <div class="item">
-                        <div class="article-title">
-                            <div style="text-align: center;">너에게 보내는</div>
-                            <div style="text-align: center;">내 빛나는 진심</div>
-                            
-                        </div>
-
-                        <div class="download-button-group">
-                            <a href="https://itunes.apple.com/kr/app/amanda/id906675357?l=en&mt=8" target="_blank"
-                                class="download-button">
-                                <img src="assets/image/btn-appstore@3x.png" alt="Download App Store">
-                            </a>
-
-                            <a href="https://play.google.com/store/apps/details?id=com.dorsia.amanda" target="_blank"
-                                class="download-button">
-                                <img src="assets/image/btn-google@3x.png" alt="Download Play Store">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="article-image article-image-01" x_alt="이제는 누구나 아만다">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slider-container flex-reverse-wrap">
-                    <div class="item">
-                        <div class="article-title">
-                            <div style="text-align: center;">이제 마음을</div>
-                            <div style="text-align: center;">'별'로 표현하세요</div>
-                            
-                        </div>
-
-                        <div class="download-button-group">
-                            <a href="https://itunes.apple.com/kr/app/amanda/id906675357?l=en&mt=8" target="_blank"
-                                class="download-button">
-                                <img src="assets/image/btn-appstore@3x.png" alt="Download App Store">
-                            </a>
-
-                            <a href="https://play.google.com/store/apps/details?id=com.dorsia.amanda" target="_blank"
-                                class="download-button">
-                                <img src="assets/image/btn-google@3x.png" alt="Download Play Store">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="article-image article-image-02" x_alt="옆집 비숑 괜찮더라">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slider-container flex-reverse-wrap">
-                    <div>
-                    <div class="item">
-                        <div class="article-title">
-                            <div style="text-align: center;">매일매일 무료로</div>
-                            <div style="text-align: center;">새로운 친구를</div>
-                            <div style="text-align: center;">추천받아 보세요</div>
-                        </div>
-
-                        <div class="download-button-group">
-                            <a href="https://itunes.apple.com/kr/app/amanda/id906675357?l=en&mt=8" target="_blank"
-                                class="download-button">
-                                <img src="assets/image/btn-appstore@3x.png" alt="Download App Store">
-                            </a>
-
-                            <a href="https://play.google.com/store/apps/details?id=com.dorsia.amanda" target="_blank"
-                                class="download-button">
-                                <img src="assets/image/btn-google@3x.png" alt="Download Play Store">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                    <div class="item">
-                        <div class="article-image article-image-03" x_alt="매일매일 친구추천">
-                        </div>
-                    </div>
-                    
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="article">
-            <div class="container flex-reverse-wrap">
-                <div class="item">
-                    <div class="article-title">
-                        <div style="text-align: left;">사랑과 우정</div>
-                        <div style="text-align: left;">모두 "별"로 쉽게 표현해보세요.</div>
-                        
-                    </div>
-
-                    <div class="article-content">
-
-                        <div style="text-align: left;">고마운 사람, 몰래 짝사랑하는 사람, </div>
-                        <div style="text-align: left;">말로 표현하기엔 몸은 배배, 손도 오글오글. </div>
-                        <div style="text-align: left;">별점 다섯개 만점으로 마음을 몰래 전달해보면 어떨까요?</div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="article-image">
-                        <img src="assets/image_v5/01_img.png" alt="짝사랑">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="article right">
-            <div class="container flex-wrap">
-                <div class="item">
-                    <div class="article-image">
-                        <img src="assets/image_v5/02_img.png" alt="익명채팅자동생성">
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="article-title">
-                        <div style="text-align: left;">날 좋아하는 당신, </div>
-                        <div style="text-align: left;">그런데 누구시죠?</div>
-
-                    </div>
-
-                    <div class="article-content">
-                        <div style="text-align: left;">서로 5점 만점을 주면 자동으로 "오별채팅"이 열려요!</div>
-                        <div style="text-align: left;">날 100% 좋아하는 익명의 사람과 5분간 두근두근 대화 어때요?</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="container flex-reverse-wrap">
-                <div class="item">
-                    <div class="article-title">
-                        <div style="text-align: left;">매너는 좋은데</div>
-                        <div style="text-align: left;">정말로 좋은 사람일까?</div>
-
-                    </div>
-
-                    <div class="article-content">
-                        <div style="text-align: left;">걱정하지 마세요! 별별사람은 지인이 서로를 평가해주기 때문에 </div>
-                        <div style="text-align: left;">훨씬 신뢰도 높은 만남을 가질 수 있어요</div>
-                        <div style="text-align: left;">주변 사람의 평판이 사람의 가치를 나타내는 법! </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="article-image">
-                        <img src="assets/image_v5/03_img.png" alt="좋은사람">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="article bottom">
-            <div class="background-image">
-                <img src="assets/image_v5/bottom_image.png" alt="Background">
-            </div>
-
-            <div class="container">
-                <div class="item">
-                    <div class="article-title">
-                        <div>지금 별별사람에서</div>
-                        <div>운명의 그 사람을 만나보세요</div>
-                        <div class="download-button-group">
-                            <a href="https://itunes.apple.com/kr/app/amanda/id906675357?l=en&mt=8" target="_blank"
-                                class="download-button">
-                                <img src="assets/image/btn-appstore@3x.png" alt="Download App Store">
-                            </a>
-
-                            <a href="https://play.google.com/store/apps/details?id=com.dorsia.amanda" target="_blank"
-                                class="download-button">
-                                <img src="assets/image/btn-google@3x.png" alt="Download Play Store">
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div id="footer">
-        <div class="container">
-            <ul class="list">
-                <li><a href="https://techlabs.kr/" target="_blank">회사소개</a></li>
-                <li><a href="/privacy/amanda/agreement.html" target="_blank">이용약관</a></li>
-                <li><a href="/privacy/amanda/index.html" target="_blank">개인정보 취급 방침</a></li>
-                <li><a href="/privacy/amanda/teenager.html" target="_blank">청소년 보호정책</a></li>
-                <li><a href="/privacy/amanda/marketing.html" target="_blank">마케팅 정보 수신동의</a></li>
-                <li><a href="/privacy/amanda/gps.html" target="_blank">위치정보 이용약관</a></li>
-            </ul>
-
-            <ul class="information">
-                <li>(주)지에스디랩 (대표이사: 유연미 / 개인정보보호책임자: 김동현)</li>
-                <li>서울시 금천구 가산디지털2로 101, 한라원앤원 A동 12층</li>
-                <li>02-597-9600<span class="highlight"><a class="mail" href="mailto:help@amanda.co.kr">(이메일 고객센터만
-                            운영)</a></span></li>
-                <li>사업자등록번호: 140-81-84821</li>
-                <li>통신판매신고번호: 제 2018-서울강남-03394호</li>
-            </ul>
-
-            <ul class="information">
-                <li>고객센터: <a class="mail" href="mailto:help@gsdlab.co.kr">help@gsdlab.co.kr</a></li>
-                <li>카카오톡: 친구찾기>id검색>"@별별사람" 검색</li>
-            </ul>
-            <!--
-        <div class="document">
-            <span class="highlight">결혼중계업 신고필증 : <a href="/stock/marry.html" target="_blank">내용보기</a></span>
-        </div>
-        -->
-            <div class="copyright">
-                <span class="highlight">Copyright@지에스디랩 co.,Ltd. All Rights reserved.</span>
-            </div>
-        </div>
-    </div>
-
-    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
