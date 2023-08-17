@@ -103,15 +103,15 @@ header #sns img {
 }
 
 .mainVisual .swiper .swiper-slide.slide-1 {
-    background-image: url('../images/slider_image_01.png');
+    background-image: url('../images/slider_image_01.jpg');
 }
 
 .mainVisual .swiper .swiper-slide.slide-2 {
-    background-image: url('../images/slider_image_02.png');
+    background-image: url('../images/slider_image_02.jpg');
 }
 
 .mainVisual .swiper .swiper-slide.slide-3 {
-    background-image: url('../images/slider_image_03.png');
+    background-image: url('../images/slider_image_03.jpg');
 }
 
 .mainVisual .swiper .swiper-slide .content {
@@ -216,7 +216,7 @@ section.download .downloadWrap {
     height: 100%;
     max-width: 1920px;
     overflow: hidden;
-    background: url(../images/bottom_image.png) no-repeat;
+    background: url(../images/bottom_image.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
